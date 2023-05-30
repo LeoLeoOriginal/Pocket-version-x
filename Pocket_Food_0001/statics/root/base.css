@@ -82,7 +82,7 @@ header{
 	width:50px;
 }
 .toggler #close{
-	transition: 0.3s;
+	transition: 0.5s;
 	background-color: #0000;
 	color: #0000;
 }
@@ -95,6 +95,10 @@ header{
 #check:checked ~ .toggler #close{
 	background-color: white;
 	color: #F25B0AFF;
+}
+#check:checked ~ .toggler #menu-bars{
+	background-color: #0000;
+	color: #0000;
 }
 .menu-item{
 	float: left;
