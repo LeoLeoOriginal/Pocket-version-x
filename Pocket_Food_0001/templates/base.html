@@ -9,7 +9,6 @@
 	<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.2.7/dist/cdn/beer.min.js"></script>
 	<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'root/base.css' %}">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 <header class='head-foot'>
@@ -19,12 +18,12 @@
 	<input type='checkbox' id="check">
 	<label class="toggler" for="check">
 		<div class="btn small-round">
-			<i id='menu' class="material-icons">menu</i>
+			<i id='menu'>menu</i>
 		</div>	
 	</label>
 	<label class="toggler" for="check">
 		<div id='close' class="btn small-round">
-			<i id='menu' class="material-icons">close</i>
+			<i id='menu'>close</i>
 		</div>	
 	</label>
 	<div class="menu-content">
@@ -32,16 +31,16 @@
 			Menu
 		</div>
 		<ol>
-			<li><i class="material-icons">home</i><a href="">Inicio</a></li>
-			<li><i class="material-icons">food_bank</i><a href="">Menú</a></li>
+			<li><a href=""><i class='large'>home</i> Inicio</a></li>
+			<li><a href=""><i class='large'>menu_book</i> Menú</a></li>
+			<li><a href=""><i class='large'>settings</i> Ajustes</a></li>
+			<li><a href=""><i class='large'>person</i> Perfil</a></li>
+			<li><a href=""><i class='large'>groups</i> Nosotros</a></li>
 		</ol>
 	</div>
 </div>
 <div class="content">
 	{% block content %}{% endblock %}
 </div>
-<footer class='head-foot'>
-	<h1 class='max center-align'>footer</h1>
-</footer>
 </body>
 </html>

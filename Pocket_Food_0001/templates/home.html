@@ -3,7 +3,21 @@
 
 {% block title %}Pocket Food | Home{% endblock %}
 {% block content %}
-	<article class="no-padding">
+
+<article class='home-dropdown'>
+  <details>
+    <summary class="none">
+      <div class="row">
+        <i class="extra">menu_book</i>
+        <div class="max">
+          <h5>Custom</h5>
+        </div>
+        <i>arrow_drop_down</i>
+      </div>
+    </summary>
+    <sectio class="menu-content">
+
+      <article class="no-padding menu-item">
   <img class="responsive small" src="{% static 'root/salad.jpg' %}"><!----><!---->
   <div class="padding">
     <h5>Entradas</h5>
@@ -12,9 +26,9 @@
       <button>Button</button>
     </nav>
   </div>
-</article>
+  </article>
 
-<article class="no-padding">
+  <article class="no-padding menu-item">
   <img class="responsive small" src="{% static 'root/pupusas1.jpg' %}"><!----><!---->
   <div class="padding">
     <h5>Comidas</h5>
@@ -23,9 +37,9 @@
       <button>Button</button>
     </nav>
   </div>
-</article>
+  </article>
 
-<article class="no-padding">
+  <article class="no-padding menu-item">
   <img class="responsive small" src="{% static 'root/milky.jpg' %}"><!----><!---->
   <div class="padding">
     <h5>Bebidas</h5>
@@ -34,9 +48,9 @@
       <button>Button</button>
     </nav>
   </div>
-</article>
+  </article>
 
-<article class="no-padding">
+  <article class="no-padding menu-item">
   <img class="responsive small" src="{% static 'root/pastries.jpg' %}"><!----><!---->
   <div class="padding">
     <h5>Postres?</h5>
@@ -45,5 +59,23 @@
       <button>Button</button>
     </nav>
   </div>
+  </article>
+    </sectio>
+  </details>
 </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
