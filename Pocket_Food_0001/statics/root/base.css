@@ -1,0 +1,82 @@
+*{
+	z-index: 0;
+	margin: 0px;
+	padding: 0px;
+	transition: 0.5s ease;
+}
+.head-foot{
+	width: 100%;
+	padding: 10px;
+	background-color: #F25B0AFF;
+	color: #fff;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+}
+.content{
+	position: absolute;
+	height: 100%;
+}
+#check{
+	display: none;
+	visibility: hidden;
+}
+.menu{
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	height: 100%;
+	width: 250px;
+}
+.menu-content{
+	height: 100%;
+	width: 250px;
+	background-color: #79A33DFF;
+	transform: translateX(-250px);
+}
+.menu-head{
+	width: 100%;
+	height: 100px;
+	padding: 25px 0px;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 10px;
+	background-color: #8AB44AFF;
+}
+.toggler{
+	z-index: 2;
+	position: fixed;
+	background-color: #0000;
+	top:25px;
+	left:25px;
+	transform: translateX(0px) rotate(0deg);
+	pointer: click;
+}
+.toggler .btn{
+	background-color: white;
+	color: #F25B0AFF;
+	text-align: center	;
+	font-size:30px;
+	width:50px;
+}
+.toggler #close{
+	background-color: #0000;
+	color: #0000;
+}
+#check:checked ~ .menu-content{
+	transform: translateX(0px);	
+}
+#check:checked ~ .toggler .btn{
+	transform: translateX(250px) rotate(90deg);
+}
+#check:checked ~ .toggler #close{
+	transition: 0.3s;
+	background-color: white;
+	color: #F25B0AFF;
+}
+article{
+	float: left;
+	width: 30%;
+	margin: 1.5%;
+}
