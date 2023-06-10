@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'SignIn'
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Pocket_Food_0001.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases

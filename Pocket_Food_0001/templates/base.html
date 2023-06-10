@@ -5,42 +5,36 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% block title %}{% endblock %}</title>
-	<link href="https://cdn.jsdelivr.net/npm/beercss@3.2.7/dist/cdn/beer.min.css" rel="stylesheet">
-	<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.2.7/dist/cdn/beer.min.js"></script>
-	<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'root/base.css' %}">
 </head>
 <body>
-<header class='head-foot'>
-	<h1 class='max center-align'>pocket</h1>
-</header>
-<div class="menu">
-	<input type='checkbox' id="check">
-	<label class="toggler" for="check">
-		<div id='menu-bars' class="btn small-round">
-			<i id='menu'>menu</i>
-		</div>	
-	</label>
-	<label class="toggler" for="check">
-		<div id='close' class="btn small-round">
-			<i id='menu'>close</i>
-		</div>	
-	</label>
-	<div class="menu-content">
-		<div class="menu-head">
-			Menu
-		</div>
-		<ol>
-			<li><a href=""><i class='large'>home</i> Inicio</a></li>
-			<li><a href=""><i class='large'>menu_book</i> Menú</a></li>
-			<li><a href=""><i class='large'>settings</i> Ajustes</a></li>
-			<li><a href=""><i class='large'>person</i> Perfil</a></li>
-			<li><a href=""><i class='large'>groups</i> Nosotros</a></li>
-		</ol>
+	<button id="filter" class="page-filter-off"></button>
+	<!--<i class="material-icons"></i>-->
+	<header>
+		<button class="button-menu-close" id="menu-button" onclick="changeIcon('menubutton-icon','menu','close');">
+			<i id="menubutton-icon" class="material-icons">menu</i>
+		</button>
+		<h1>Pocket</h1>
+		<button class="button-profile-close" id="account-button" onclick="changeIcon('account-icon','account_circle','close');">
+			<i id="account-icon" class="material-icons">account_circle</i>
+		</button>
+
+	</header>
+	<div id="menu-container" class="menu-close">
+		<header>Menu</header>
+		<button>Home</button>
+		<button>Profile</button>
+		<button>Settings</button>
+		<button>Exit</button>
 	</div>
-</div>
-<div class="content">
-	{% block content %}{% endblock %}
-</div>
+	<div id="profile-menu-container" class="profile-menu-close">
+		<header>
+			Profile
+		</header>
+		<button>Log Out</button>
+	</div>
+
+<script type="text/javascript" src="{% static 'root/base.js' %}"></script>
 </body>
 </html>

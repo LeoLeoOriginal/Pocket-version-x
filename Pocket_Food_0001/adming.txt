@@ -1,0 +1,3 @@
+user: 'Admin'
+email: 'le.1114ca@gamcil.com'
+pass: '1234'

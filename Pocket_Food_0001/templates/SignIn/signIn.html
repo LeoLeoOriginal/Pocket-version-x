@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'signIn/signIn.css' %}">
+	<title></title>
+</head>
+<body class="log-in">
+	<button id='switch-button'>
+		<div id="switch-text">Log-In</div>
+	</button>
+	{% if messages %}
+		{% for msg in messages %}
+			<p class="message {{msg.tags}}">{{msg}}</p>
+		{% endfor %}
+	{% endif %}
+	<div id="filter">
+		<div id="right-side" class="panel"></div>
+		<div id="left-side" class="panel"></div>
+	</div>
+	<div class="outer-container">
+		<div id="right-side" class="out-panel">
+			<div id="log-form" class="form-card">
+				<form id="log-in-form" method="post" action="{% url 'sign-in' %}">
+					<p>Log In</p>
+				    {% csrf_token %}
+				    <input name="username">
+					<input name="password">
+				    <button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+		<div id="left-side" class="out-panel"></div>
+	</div>
+
+<script type="text/javascript" src="{% static 'signIn/signIn.js' %}"></script>
+</body>
+</html>
